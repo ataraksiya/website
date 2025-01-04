@@ -11,6 +11,7 @@ import { getSocials } from "@/lib/contentful";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 import { Toaster } from "@/components/ui/sonner";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tuna.one"),
@@ -71,6 +72,8 @@ export default async function RootLayout({
               {children}
             </div>
           </ThemeProvider>
+          <ScrollToTop />
+
           <SpeedInsights />
           <Analytics />
           <Toaster />
