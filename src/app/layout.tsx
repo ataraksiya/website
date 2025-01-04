@@ -8,6 +8,8 @@ import { sharedTitle, sharedDescription } from "@/app/shared-metadata";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { getSocials } from "@/lib/contentful";
+import { ReCaptchaProvider } from "next-recaptcha-v3";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tuna.one"),
@@ -51,6 +53,10 @@ export default async function RootLayout({
   }
   const socials = await fetchData();
   return (
+    <ReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      hidden
+    >
       <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
         <body>
           <ThemeProvider
@@ -65,7 +71,9 @@ export default async function RootLayout({
             </div>
           </ThemeProvider>
           <Analytics />
+          <Toaster />
         </body>
       </html>
+    </ReCaptchaProvider>
   );
 }

@@ -10,6 +10,7 @@ import RecentlyWatchedAnimes from "@/components/sections/RecentlyWatchedAnimes";
 import Lanyard from "@/components/sections/Lanyard";
 import Bookmarks from "@/components/sections/Bookmarks";
 import BlogPosts from "@/components/sections/BlogPosts";
+import Contact from "@/components/sections/Contact";
 
 export const revalidate = 900;
 
@@ -32,10 +33,13 @@ export default function Page() {
         <Repositories />
         <SocialMedia />
       </div>
-      <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-4 xl:gap-y-5">
+      <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-4">
         <BlogPosts />
         <Bookmarks />
         <Technologies />
+      </div>
+      <div className="grid w-full grid-cols-1">
+        <Contact />
       </div>
     </>
   );
