@@ -10,6 +10,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { getSocials } from "@/lib/contentful";
 import { ReCaptchaProvider } from "next-recaptcha-v3";
 import { Toaster } from "@/components/ui/sonner";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tuna.one"),
@@ -70,6 +71,7 @@ export default async function RootLayout({
               {children}
             </div>
           </ThemeProvider>
+          <SpeedInsights />
           <Analytics />
           <Toaster />
         </body>
