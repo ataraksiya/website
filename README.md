@@ -19,6 +19,8 @@
 - 🎧 **Spotify API** - Displays my recently listened songs.
 - 🎮 **Lanyard API** - Shows my live Discord status.
 - 🎥 **MyAnimeList API** - Tracks my anime watchlist.
+- 📧 **Nodemailer** - Server-side email handling for contact form
+- 🤖 **reCAPTCHA v3** - Invisible spam protection
 
 ## ✨ Features
 
@@ -31,6 +33,7 @@
 - **Blog** - Read my thoughts on development and beyond.
 - **Bookmarks with Raindrop** - A collection of my favorite web bookmarks.
 - **Dark/Light Theme** - Supports both dark and light themes.
+- **Contact Form** - Modern, secure contact form with spam protection.
 
 ## 🚀 Getting Started
 
