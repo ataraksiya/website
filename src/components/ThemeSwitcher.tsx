@@ -21,7 +21,7 @@ export default function ThemeSwitcher({ full }: { full: boolean }) {
         <Button
           className={cn(
             "text-muted transition-colors duration-300 dark:hover:text-white",
-            !full && "border-primary backdrop-blur-2xl dark:bg-primary/30",
+            !full && "backdrop-blur-2xl dark:bg-primary/30",
           )}
           size="icon"
         >

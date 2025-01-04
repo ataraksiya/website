@@ -19,7 +19,7 @@ export default function Head() {
         <div className="flex flex-row gap-2">
           <RainbowButton>
             <Link
-              href="mailto:me@tuna.one"
+              href="#contact"
               className="flex flex-row items-center gap-1.5"
             >
               <FaEnvelope /> Contact
