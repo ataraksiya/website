@@ -60,7 +60,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="col-span-2 grid w-full grid-cols-1 justify-center gap-3 rounded-lg border bg-card px-5 py-5 drop-shadow-2xl xl:col-span-4 xl:grid-cols-2">
+    <div
+      id="contact"
+      className="col-span-2 grid w-full grid-cols-1 justify-center gap-3 rounded-lg border bg-card px-5 py-5 drop-shadow-2xl xl:col-span-4 xl:grid-cols-2"
+    >
       <div className="flex flex-col gap-2">
         <div className="flex flex-row items-center gap-2">
           <Image

@@ -58,15 +58,17 @@
     }
 }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground font-sans;
-    }
+@layer base {
+  * {
+    @apply border-border;
   }
-
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  html {
+    @apply !scroll-smooth
+  }
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -78,15 +80,6 @@
 
 ::-webkit-scrollbar-thumb {
   background: #363636;
-}
-
-@layer base {
-  * {
-    @apply border-border;
-    }
-  body {
-    @apply bg-background text-foreground;
-    }
 }
 
 .grecaptcha-badge {
