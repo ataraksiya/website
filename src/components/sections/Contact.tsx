@@ -17,7 +17,7 @@ export default function Contact() {
 
   const { executeRecaptcha } = useReCaptcha();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     toast.promise(
@@ -49,7 +49,9 @@ export default function Contact() {
     );
   };
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
