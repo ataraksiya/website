@@ -9,7 +9,7 @@ const userId: Snowflake = `${BigInt(process.env.NEXT_PUBLIC_DISCORD!)}`;
 const Lanyard = () => {
   const data = useLanyardWS(userId);
   return (
-    <div className="absolute top-4 flex flex-row gap-2">
+    <div className="absolute left-1/2 top-4 flex -translate-x-1/2 flex-row gap-2 xl:left-auto xl:transform-none">
       <Link
         href={`https://discord.com/users/${process.env.NEXT_PUBLIC_DISCORD}`}
         target="_blank"

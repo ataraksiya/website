@@ -17,7 +17,7 @@ export const revalidate = 900;
 export default function Page() {
   return (
     <>
-      <div className="w-full rounded-lg border bg-card px-5 py-14 drop-shadow-2xl">
+      <div className="relative w-full rounded-lg border bg-card px-5 py-14 drop-shadow-2xl">
         <Lanyard />
         <Head />
       </div>
