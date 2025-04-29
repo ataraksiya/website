@@ -74,7 +74,4 @@ Contributions are welcome! Let’s make this project even better together! 💪
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-=======
-# website
-💫 Source code for my personal website. Built using Next.js, TailwindCSS, and shadcn/ui.
->>>>>>> 248a6d44394a1c0f3bcfb6be9c6a7b0d3cfe40b8
+
