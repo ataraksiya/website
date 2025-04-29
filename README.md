@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p>
     <img src="header.png" alt="Example image of Website." />
 </p>
