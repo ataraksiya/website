@@ -15,12 +15,12 @@ import Contact from "@/components/sections/Contact";
 export const revalidate = 900;
 
 export default function Page() {
-  let RecentlyListenedSongsWrapper = null;
+  let RepositoriesWrapper = null;
   try {
-    RecentlyListenedSongsWrapper = <RecentlyListenedSongs />;
+    RepositoriesWrapper = <Repositories />;
   } catch (e) {
-    console.warn("Spotify data fetch skipped:", e);
-    RecentlyListenedSongsWrapper = null; // geçici deploy için boş bırak
+    console.warn("KV fetch skipped:", e);
+    RepositoriesWrapper = null; // KV devre dışı bırakıldı
   }
 
   return (
@@ -35,10 +35,10 @@ export default function Page() {
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-3 xl:gap-y-10">
         <RecentlyWatchedAnimes />
-        {RecentlyListenedSongsWrapper}
+        <RecentlyListenedSongs />
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-2 xl:gap-y-10">
-        <Repositories />
+        {RepositoriesWrapper}
         <SocialMedia />
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-4">
