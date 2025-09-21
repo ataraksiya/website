@@ -20,7 +20,15 @@ export default function Page() {
     RepositoriesWrapper = <Repositories />;
   } catch (e) {
     console.warn("KV fetch skipped:", e);
-    RepositoriesWrapper = null; // KV devre dışı bırakıldı
+    RepositoriesWrapper = null; // KV devre dışı
+  }
+
+  let RecentlyListenedSongsWrapper = null;
+  try {
+    RecentlyListenedSongsWrapper = <RecentlyListenedSongs />;
+  } catch (e) {
+    console.warn("Spotify fetch skipped:", e);
+    RecentlyListenedSongsWrapper = null; // Spotify devre dışı
   }
 
   return (
@@ -35,7 +43,7 @@ export default function Page() {
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-3 xl:gap-y-10">
         <RecentlyWatchedAnimes />
-        <RecentlyListenedSongs />
+        {RecentlyListenedSongsWrapper}
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-2 xl:gap-y-10">
         {RepositoriesWrapper}
