@@ -15,6 +15,14 @@ import Contact from "@/components/sections/Contact";
 export const revalidate = 900;
 
 export default function Page() {
+  let RecentlyListenedSongsWrapper = null;
+  try {
+    RecentlyListenedSongsWrapper = <RecentlyListenedSongs />;
+  } catch (e) {
+    console.warn("Spotify data fetch skipped:", e);
+    RecentlyListenedSongsWrapper = null; // geçici deploy için boş bırak
+  }
+
   return (
     <>
       <div className="relative w-full rounded-lg border bg-card px-5 py-14 drop-shadow-2xl">
@@ -27,7 +35,7 @@ export default function Page() {
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-3 xl:gap-y-10">
         <RecentlyWatchedAnimes />
-        <RecentlyListenedSongs />
+        {RecentlyListenedSongsWrapper}
       </div>
       <div className="grid w-full grid-cols-1 gap-x-5 gap-y-5 xl:auto-rows-[22rem] xl:grid-cols-2 xl:gap-y-10">
         <Repositories />
